@@ -1,0 +1,21 @@
+services:
+  http:
+    image: stefanopilla/spilla_http:latest
+    container_name: http
+    init: false
+    volumes:
+      # share current directory
+      - ./:/files
+      # share custom directory /home/foo/web
+      #- /home/foo/web:/files  
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - TZ="Europe/Rome"
+      #- user="foo"
+      #- pass="insecure"
+      #- auth=random
+    ports:
+      - "8080:80"
+    restart: always
+    healthcheck:
+      test: "bash -c '</dev/tcp/localhost/80' || exit 1"

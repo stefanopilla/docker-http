@@ -1,13 +1,6 @@
 # spilla-http
 
-![Version][version-shield]
-![Supports amd64 architecture][amd64-shield]
-![Supports aarch64 architecture][aarch64-shield]
-![Supports armhf architecture][armhf-shield]
-![Supports armv7 architecture][armv7-shield]
-![Docker image size][image-size-shield]
-
-Quick way to share files with a [Fancy Index Listing](https://github.com/Vestride/fancy-index/) via HTTP.
+Simple apache http server to share/download files via HTTP/S using Fancy-Index-Listing [Fancy Index Listing](https://github.com/Vestride/fancy-index/) via HTTP.
 
 ## Parameters
 
